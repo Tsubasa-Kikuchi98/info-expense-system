@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>単体試験</title>
+<style>
+  body { font-family: "Yu Gothic UI", "Meiryo UI", sans-serif; font-size: 13px; margin: 16px; color: #1f2933; }
+  h1 { font-size: 18px; margin: 0 0 8px; }
+  .note { color: #52606d; margin: 0 0 12px; }
+  .summary { font-weight: bold; padding: 6px 10px; border-radius: 3px; display: inline-block; }
+  .summary.pass { background: #e3f4e8; color: #1d6b38; }
+  .summary.fail { background: #fbe4e4; color: #a12323; }
+  table { border-collapse: collapse; margin-top: 12px; width: 100%; }
+  th, td { border: 1px solid #cbd2d9; padding: 4px 6px; text-align: left; vertical-align: top; }
+  th { background: #eef1f4; }
+  tr.fail td { background: #fbe4e4; color: #a12323; }
+  #result-text { display: none; }
+</style>
+</head>
+<body>
+<h1>経費精算システム 単体試験</h1>
+<p class="note">対象: js/core/、js/logic/。URL の末尾に ?filter=RCP のように付けると、テストID・テスト名で絞り込みます。</p>
+<div id="result-body"></div>
+<pre id="result-text"></pre>
+
+<!-- 対象: js/core/ と js/logic/（06 の4章と同じ順） -->
+<script src="../js/core/namespace.js"></script>
+<script src="../js/core/config.js"></script>
+<script src="../js/core/messages.js"></script>
+<script src="../js/core/date-util.js"></script>
+<script src="../js/core/csv.js"></script>
+<script src="../js/logic/master-lookup.js"></script>
+<script src="../js/logic/approval-route.js"></script>
+<script src="../js/logic/apply-deadline.js"></script>
+<script src="../js/logic/receipt-rule.js"></script>
+<script src="../js/logic/rail-fare.js"></script>
+<script src="../js/logic/travel-expense.js"></script>
+<script src="../js/logic/general-expense.js"></script>
+<script src="../js/logic/tax-category.js"></script>
+<script src="../js/logic/report-status.js"></script>
+<script src="../js/logic/settlement.js"></script>
+<script src="../js/logic/report-number.js"></script>
+<script src="../js/logic/report-validator.js"></script>
+
+<!-- テストランナー -->
+<script src="runner/test-runner.js"></script>
+
+<!-- テスト用のマスタ -->
+<script src="unit/fixtures.js"></script>
+
+<!-- 単体試験（テストを追加したら1行追加する） -->
+<script src="unit/date-util.test.js"></script>
+<script src="unit/report-number.test.js"></script>
+<script src="unit/receipt-rule.test.js"></script>
+</body>
+</html>
