@@ -111,6 +111,7 @@ info-expense-system/
 | `docs/05-batch-interface.md` | バッチと連携ファイルのレイアウト | バッチを作る・直す |
 | `docs/06-architecture.md` | 方式・層・関数一覧・命名規約・自動テストの仕組み | 実装の置き場所を決める |
 | `team/unit-test-guide.md` | 単体試験の書き方 | 単体試験を書く |
+| `team/templates/` | テストケース表・不具合票のひな形 | 単体試験を書く・不具合を起票する |
 
 ## 9. 作業の進め方
 
